@@ -1,0 +1,29 @@
+<div class="auth-container">
+  <h2>Recuperar Senha</h2>
+
+  <% if resource.errors.any? %>
+    <div class="errors">
+      <h4><%= pluralize(resource.errors.count, "erro") %> ao tentar enviar:</h4>
+      <ul>
+        <% resource.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name)) do |f| %>
+    <div class="form-group">
+      <%= f.label :email, "E-mail" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit "Enviar instruções", class: "btn" %>
+    </div>
+  <% end %>
+
+  <div class="links">
+    <%= link_to "Voltar ao login", new_user_session_path %>
+  </div>
+</div>

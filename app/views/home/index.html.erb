@@ -1,0 +1,11 @@
+<div class="page-container">
+  <h1>Bem-vindo ao Devise Demo</h1>
+  <p>Esta é a página pública. Qualquer pessoa pode ver!</p>
+
+  <% unless user_signed_in? %>
+    <div class="buttons">
+      <%= link_to "Fazer Login", new_user_session_path, class: "btn" %>
+      <%= link_to "Cadastrar-se", new_user_registration_path, class: "btn btn-secondary" %>
+    </div>
+  <% end %>
+</div>

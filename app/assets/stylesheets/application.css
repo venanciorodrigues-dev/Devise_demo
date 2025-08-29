@@ -1,0 +1,310 @@
+.auth-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: #4a90e2;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #357ab8;
+}
+
+.links {
+  margin-top: 15px;
+}
+
+.links a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+/* Fundo azul sólido */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #4a90e2; /* azul sólido */
+  color: #333;
+}
+
+/* Caixa centralizada */
+.auth-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Títulos */
+.auth-container h2 {
+  margin-bottom: 20px;
+  color: #4a90e2; /* mesmo azul do fundo */
+}
+
+/* Inputs */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #1a1a2e;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Botão */
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: #4a90e2;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #357ab8;
+}
+
+/* Links */
+.links {
+  margin-top: 15px;
+}
+
+.links a {
+  color: #4a90e2; /* links combinando */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Container centralizado para páginas públicas e privadas */
+.page-container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Títulos */
+.page-container h1 {
+  color: #4a90e2;
+  margin-bottom: 15px;
+}
+
+/* Texto */
+.page-container p {
+  color: #1a1a2e;
+  margin-bottom: 25px;
+}
+
+/* Botões */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #4a90e2;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #357ab8;
+}
+
+/* Botão secundário */
+.btn-secondary {
+  background: #4a90e2;
+}
+
+.btn-secondary:hover {
+  background: #155ab6;
+}
+
+/*Mensagem de erro*/
+.errors {
+  background: #ffe6e6; /* fundo vermelho claro */
+  border: 1px solid #ff4d4d; /* borda vermelha */
+  color: #b30000; /* texto vermelho escuro */
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.errors ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.errors h4 {
+  margin-top: 0;
+}
+
+/*Faz parte da tela privada depois que o usuário faz loguin*/
+/* Wrapper */
+.dashboard-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fa;
+  position: relative;
+}
+
+/* Botão "=" */
+.sidebar-toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  background: #4a90e2;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Sidebar escondida inicialmente (fora da tela) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background: #4a90e2;
+  color: #fff;
+  padding: 20px;
+  transform: translateX(-100%);   /* escondida */
+  transition: transform 0.3s ease; /* animação suave */
+  z-index: 1000;
+}
+
+/* Sidebar visível */
+.sidebar.expanded {
+  transform: translateX(0);  /* entra deslizando */
+}
+
+/* Menu da sidebar */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.sidebar-menu li {
+  margin-bottom: 15px;
+}
+
+.sidebar-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sidebar-menu li a:hover {
+  text-decoration: underline;
+}
+
+/* Botão sair */
+.btn-logout-sidebar {
+  width: 100%;
+  background: #e74c3c;
+  color: #fff;
+  padding: 8px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-logout-sidebar:hover {
+  background: #c0392b;
+}
+
+/* Área principal */
+.dashboard-main {
+  flex: 1;
+  padding: 50px;
+  text-align: center;
+}
+
+.dashboard-main h1 {
+  color: #4a90e2;
+  margin-bottom: 30px;
+}

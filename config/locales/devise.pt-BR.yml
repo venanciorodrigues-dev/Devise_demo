@@ -1,0 +1,38 @@
+  pt-BR:
+    devise:
+      failure:
+        unauthenticated: "Você precisa fazer login para continuar."
+        invalid: "E-mail ou senha inválidos."
+        locked: "Conta bloqueada."
+        last_attempt: "Última tentativa antes do bloqueio da conta."
+        not_found_in_database: "E-mail ou senha inválidos."
+      sessions:
+        signed_in: "Login efetuado com sucesso."
+        signed_out: "Logout efetuado com sucesso."
+      registrations:
+        signed_up: "Cadastro realizado com sucesso."
+        updated: "Conta atualizada com sucesso."
+        destroyed: "Conta deletada com sucesso."
+      passwords:
+        send_instructions: "Instruções enviadas para o e-mail."
+      errors:
+        messages:
+          required: "não pode ficar em branco"
+          invalid: "é inválido"
+          too_short: "é muito curto (mínimo %{count} caracteres)"
+          confirmation: "não corresponde à confirmação"
+
+    activerecord:
+      models:
+        user: "Usuário"
+      attributes:
+        user:
+          email: "E-mail"
+          password: "Senha"
+          password_confirmation: "Confirmação de senha"
+
+    errors:
+      messages:
+        blank: "não pode ficar em branco"
+        too_short: "é muito curto (mínimo %{count} caracteres)"
+        confirmation: "não corresponde à confirmação"

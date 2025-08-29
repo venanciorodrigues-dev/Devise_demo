@@ -1,0 +1,37 @@
+<div class="auth-container">
+  <h2>Fazer Login</h2>
+
+  <% if flash[:alert] %>
+    <div class="errors">
+      <ul>
+        <li><%= flash[:alert] %></li>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-group">
+      <%= f.label :email, "E-mail" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password, "Senha" %>
+      <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me, "Lembrar meu e-mail" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit "Entrar", class: "btn" %>
+    </div>
+  <% end %>
+
+  <div class="links">
+    <%= link_to "Esqueceu a senha?", new_user_password_path %><br><br>
+    <%= link_to "Criar Conta", new_user_registration_path %>
+  </div>
+</div>

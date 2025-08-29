@@ -1,0 +1,30 @@
+<div class="dashboard-wrapper">
+
+  <!-- Botão que controla a sidebar -->
+  <div class="sidebar-toggle" onclick="toggleSidebar()">=</div>
+
+  <!-- Sidebar colapsável -->
+  <aside class="sidebar">
+    <ul class="sidebar-menu">
+      <li><%= link_to "👤Perfil", "#" %></li>
+      <li><%= link_to "⚙️Configurações", "#" %></li>
+      <li>
+        <%= form_with url: destroy_user_session_path, method: :delete do %>
+          <%= submit_tag "Sair", class: "btn btn-logout-sidebar" %>
+        <% end %>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Área principal -->
+  <main class="dashboard-main">
+    <h1>Bem-vindo, <%= current_user.email %>!</h1>
+  </main>
+
+</div>
+
+<script>
+function toggleSidebar() {
+  document.querySelector('.sidebar').classList.toggle('expanded');
+}
+</script>
