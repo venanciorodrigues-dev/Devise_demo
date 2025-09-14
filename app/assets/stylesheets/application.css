@@ -308,3 +308,790 @@ body {
   color: #4a90e2;
   margin-bottom: 30px;
 }
+
+/* ------------------- FORMULÁRIO DE NOVO LIVRO ------------------- */
+.book-form-container {
+  max-width: 450px;         
+  margin: 30px auto;        
+  padding: 25px;            
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.book-form-container h1 {
+  color: #4a90e2;
+  text-align: center;
+  margin-bottom: 20px;      
+  font-size: 24px;          
+}
+
+.book-form-container .form-group {
+  margin-bottom: 12px;      
+}
+
+.book-form-container label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;       
+  color: #000000;
+  font-size: 14px;          
+}
+
+.book-form-container input,
+.book-form-container textarea {
+  width: 100%;
+  padding: 8px;             
+  border-radius: 6px;
+  border: 1px solid #ccc;   
+  font-size: 14px;          
+  box-sizing: border-box;
+}
+
+/* ------------------- CHECKBOX ALINHADO ------------------- */
+.book-form-container .form-group.checkbox-group {
+  display: flex;
+  align-items: center;      
+  gap: 6px;                
+}
+
+.book-form-container .form-group.checkbox-group input[type="checkbox"] {
+  width: auto;              
+  height: auto;
+  margin: 0;    
+  transform: translateY(-2px);  
+}
+
+/* ------------------- BOTÃO ------------------- */
+.book-form-container .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;          
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-form-container .btn:hover {
+  background: #357ab8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* ------------------- LINK VOLTAR ------------------- */
+.book-form-container .back-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;         /* aumenta área clicável */
+  background: #4a90e2;        /* fundo azul */
+  color: #fff;                /* texto branco */
+  font-weight: bold;
+  font-size: 14px;           
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-form-container .back-link:hover {
+  background: #357ab8;       
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+
+
+/* ------------------- LIVROS EMPRESTADOS / TABELA ------------------- */
+.borrowed-books-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.borrowed-books-container h1 {
+  color: #4a90e2;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.borrowed-books-container .subtitle {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* Tabela de livros */
+.borrowed-books-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border: 1px solid #ccc; /* borda geral da tabela */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.borrowed-books-table th,
+.borrowed-books-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ccc; /* linha horizontal entre linhas */
+}
+
+.borrowed-books-table th {
+  background-color: #4a90e2;
+  color: #fff;
+  font-weight: bold;
+  border-right: 1px solid #fff; /* linha vertical entre colunas */
+}
+
+.borrowed-books-table td {
+  border-right: 1px solid #ccc; /* linha vertical entre colunas */
+}
+
+.borrowed-books-table tr:last-child td {
+  border-bottom: none; /* remove linha da última linha */
+}
+
+.borrowed-books-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Mensagem caso não haja livros */
+.borrowed-books-container .no-books {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Botão de voltar */
+.borrowed-books-container .btn-back {
+  width: 120px;
+  padding: 8px 0;
+  font-size: 13px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  background: #4a90e2;
+  color: #fff;
+  border: 1px solid #357ab8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.borrowed-books-container .btn-back:hover {
+  background: #357ab8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.borrowed-books-container .back-btn {
+  display: flex;
+  justify-content: flex-start; /* botão à esquerda */
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+/* ------------------- LISTA DE LIVROS ------------------- */
+.book-list-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.book-list-container h1 {
+  color: #4a90e2;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+/* Cada item da lista */
+.book-item {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+.book-item p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.status {
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.status.available {
+  color: green;
+}
+
+.status.borrowed {
+  color: red;
+}
+
+/* Área de botões */
+.book-actions {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column; /* 👈 força botões em coluna */
+  gap: 6px;               /* espaço entre eles */
+  align-items: flex-start; /* alinhados à esquerda */
+}
+
+/* Botões padronizados */
+.book-actions .btn {
+  width: 120px;        /* largura fixa e igual pra todos */
+  padding: 6px 0;      /* altura equilibrada */
+  font-size: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* Botão primário */
+.book-actions .btn-primary {
+  background: #4a90e2;
+  color: #fff;
+  border: 1px solid #357ab8;
+}
+
+.book-actions .btn-primary:hover {
+  background: #357ab8;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Botão secundário */
+.book-actions .btn-secondary {
+  background: #4a90e2;
+  color: #fff;
+  border: 1px solid #357ab8;
+}
+
+.book-actions .btn-secondary:hover {
+  background: #357ab8;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+/* ------------------- BOTÃO VOLTAR ------------------- */
+.back-link-container {
+  display: flex;
+  justify-content: flex-start; /* alinha à esquerda */
+  margin-bottom: 20px;         /* espaço abaixo */
+}
+.back-link {
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 0;        /* garante que fique colado à esquerda */
+  padding: 8px 16px;     /* aumenta o tamanho do botão */
+  background: #4a90e2;
+  color: #fff;
+  font-size: 14px;       /* texto maior */
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  background: #357ab8;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+
+/* ------------------- DETALHES DO LIVRO ------------------- */
+.book-details-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.book-details-container h1 {
+  color: #4a90e2;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+/* Itens do detalhe do livro */
+.book-details-container .book-detail-item {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #000000;
+}
+
+.book-details-container .book-detail-item strong {
+  margin-right: 8px;
+}
+
+/* Status de disponibilidade */
+.book-details-container .status {
+  font-weight: bold;
+}
+
+.book-details-container .status.available {
+  color: green;
+}
+
+.book-details-container .status.borrowed {
+  color: red;
+}
+
+/* ------------------- BOTÃO VOLTAR ------------------- */
+.book-details-container .back-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 16px;
+  background: #4a90e2;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-details-container .back-link:hover {
+  background: #357ab8;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+
+/* ------------------- FORMULÁRIO DE LIVRO ------------------- */
+.book-form-container {
+  max-width: 450px;         
+  margin: 30px auto;        
+  padding: 25px;            
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.book-form-container h1 {
+  color: #4a90e2;
+  text-align: center;
+  margin-bottom: 20px;      
+  font-size: 24px;          
+}
+
+.book-form-container .form-group {
+  margin-bottom: 12px;      
+}
+
+.book-form-container label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;       
+  color: #1a1a2e;
+  font-size: 14px;          
+}
+
+.book-form-container input,
+.book-form-container textarea {
+  width: 100%;
+  padding: 8px;             
+  border-radius: 6px;
+  border: 1px solid #ccc;   
+  font-size: 14px;          
+  box-sizing: border-box;
+}
+
+/* Checkbox alinhado com label */
+.book-form-container .form-group.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.book-form-container .form-group.checkbox-group input[type="checkbox"] {
+  margin: 0;
+  transform: translateY(-2px);
+}
+
+/* Botão */
+.book-form-container .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.book-form-container .btn:hover {
+  background: #357ab8;
+}
+
+/* Botão voltar */
+.book-form-container .back-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: #4a90e2;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-form-container .back-link:hover {
+  background: #357ab8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+
+
+/*=======Meus Empretimos=========*/
+
+.my-loans-container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.my-loans-container h1 {
+  color: #4a90e2;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.my-loans-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.my-loans-container th, .my-loans-container td {
+  padding: 10px;
+  border: 1px solid #000000;
+  text-align: left;
+  font-size: 14px;
+}
+
+.status.available {
+  color: green;
+  font-weight: bold;
+}
+
+.status.borrowed {
+  color: red;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 5px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #4a90e2;
+  color: #fff;
+  border: 1px solid #357ab8;
+}
+
+.btn-primary:hover {
+  background: #357ab8;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 6px 14px;
+  background: #4a90e2;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  background: #357ab8;
+}
+
+
+
+/* ------------------- CONFIGURAÇÕES ------------------- */
+.settings-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center; /* Conteúdo centralizado (título/subtítulo) */
+}
+
+/* Título principal */
+.settings-container h1 {
+  color: #4a90e2;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+/* Subtítulo */
+.settings-container .subtitle {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* Cards */
+.settings-container .card {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: left; /* Card alinhado à esquerda */
+}
+
+.settings-container .card h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.settings-container .card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Área de botões dentro dos cards */
+.settings-container .actions {
+  display: flex;
+  flex-direction: column; /* 👈 botões empilhados */
+  gap: 8px;
+}
+
+/* Botões padronizados */
+.settings-container .btn {
+  width: 160px;           /* todos do mesmo tamanho */
+  padding: 8px 0;
+  font-size: 13px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  align-self: flex-start; /* alinha à esquerda dentro do card */
+}
+
+/* Botão primário */
+.settings-container .btn-primary {
+  background: #4a90e2;
+  color: #fff;
+  border: 1px solid #357ab8;
+}
+
+.settings-container .btn-primary:hover {
+  background: #357ab8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Botão de voltar */
+.settings-container .btn-back {
+  background: #4a90e2;
+  color: #ffffff;
+  border: 1px solid #ccc;
+  margin-top: 20px;      /* separação do conteúdo */
+  align-self: flex-start; /* mantém à esquerda */
+}
+
+.settings-container .btn-back:hover {
+  background: #357ab8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+/* Botão voltar alinhado à esquerda */
+.back-btn-left {
+  text-align: left; /* força o alinhamento à esquerda */
+  margin-top: 20px; /* separação do card */
+}
+
+
+
+
+/* ------------------- CONFIGURAÇÕES / EDITAR USUÁRIO ------------------- */
+.settings-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center; /* título e subtítulo centralizados */
+}
+
+/* Título principal */
+.settings-container h1 {
+  color: #4a90e2;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+/* Subtítulo */
+.settings-container .subtitle {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* Cards */
+.settings-container .card {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: left; /* conteúdo do card alinhado à esquerda */
+}
+
+.settings-container .card h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.settings-container .card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Campos do formulário */
+.settings-container .field {
+  margin-bottom: 15px;
+}
+
+.settings-container .field label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px; /* distância entre label e input */
+}
+
+.settings-container .field input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+/* Área de botões dentro dos cards */
+.settings-container .actions {
+  display: flex;
+  flex-direction: column; /* botões empilhados */
+  gap: 8px;
+  align-items: flex-start; /* alinhamento à esquerda */
+}
+
+/* Botões padronizados */
+.settings-container .btn {
+  width: 160px;           /* todos do mesmo tamanho */
+  padding: 8px 0;
+  font-size: 13px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Botão primário */
+.settings-container .btn-primary {
+  background: #4a90e2;
+  color: #fff;
+  border: 1px solid #357ab8;
+}
+
+.settings-container .btn-primary:hover {
+  background: #357ab8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Botão secundário */
+.settings-container .btn-secondary {
+  background: #4a90e2;
+  color: #fff;
+  border: 1px solid #357ab8;
+}
+
+.settings-container .btn-secondary:hover {
+  background: #357ab8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Botão de voltar */
+.settings-container .btn-back {
+  background: #4a90e2;
+  color: #fff;
+  border: 1px solid #357ab8;
+  padding: 8px 0;          /* vertical x horizontal */
+  font-size: 13px;         /* tamanho do texto */
+  border-radius: 6px;      /* arredondamento */
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.settings-container .btn-back:hover {
+  background:#357ab8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Contêiner do botão voltar */
+.back-btn {
+  display: flex;
+  justify-content: flex-start; /* 👈 alinha o botão à esquerda */
+  margin-top: 20px;
+}

@@ -1,0 +1,31 @@
+<div class="borrowed-books-container settings-container">
+  <!-- Título principal -->
+  <h1>📝 Livros Emprestados</h1>
+  <p class="subtitle">Lista de livros que estão atualmente emprestados.</p>
+
+  <% if @borrowed_books.any? %>
+    <table class="borrowed-books-table">
+      <thead>
+        <tr>
+          <th>Título</th>
+          <th>Autor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @borrowed_books.each do |book| %>
+          <tr>
+            <td><%= book.title %></td>
+            <td><%= book.author %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p class="no-books">Nenhum livro emprestado no momento.</p>
+  <% end %>
+
+  <!-- Botão de voltar -->
+  <div class="back-btn">
+    <%= link_to "⬅️ Voltar", dashboard_path, class: "btn btn-back" %>
+  </div>
+</div>

@@ -1,11 +1,21 @@
 <div class="page-container">
-  <h1>Bem-vindo ao Devise Demo</h1>
-  <p>Esta é a página pública. Qualquer pessoa pode ver!</p>
+  <header class="page-header">
+    <h1>Bem-vindo ao Devise Demo</h1>
+    <p class="subtitle">
+      Esta é uma página pública, acessível a todos os visitantes.
+    </p>
+  </header>
 
-  <% unless user_signed_in? %>
-    <div class="buttons">
-      <%= link_to "Fazer Login", new_user_session_path, class: "btn" %>
-      <%= link_to "Cadastrar-se", new_user_registration_path, class: "btn btn-secondary" %>
+  <% if user_signed_in? %>
+    <div class="welcome-user">
+      <p>Olá, <strong><%= current_user.email %></strong>! 🎉</p>
+      <%= link_to "Dashboard", dashboard_path, class: "btn btn-primary" %>
+      <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
+    </div>
+  <% else %>
+    <div class="auth-actions">
+      <%= link_to "Fazer Login", new_user_session_path, class: "btn btn-primary" %>
+      <%= link_to "Criar Conta", new_user_registration_path, class: "btn btn-secondary" %>
     </div>
   <% end %>
 </div>

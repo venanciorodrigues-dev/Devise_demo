@@ -1,0 +1,43 @@
+<div class="my-loans-container">
+  <h1>📚 Meus Empréstimos</h1>
+
+  <% if @my_loans.any? %>
+    <table class="my-loans-table">
+      <thead>
+        <tr>
+          <th>Livro</th>
+          <th>Data de Empréstimo</th>
+          <th>Data de Devolução</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @my_loans.each do |loan| %>
+          <tr id="loan-<%= loan.id %>">
+            <td><%= loan.book.title %></td>
+            <td><%= loan.created_at.to_date %></td>
+            <td><%= loan.due_date %></td>
+            <td class="<%= loan.returned ? 'status available' : 'status borrowed' %>">
+              <%= loan.returned ? "Devolvido" : "Emprestado" %>
+            </td>
+            <td>
+              <%# botão de devolver - chama BooksController#return via return_book_path(book) %>
+              <%= button_to "Devolver", return_book_path(loan.book),
+                    method: :patch,
+                    data: { confirm: "Deseja devolver este livro?" },
+                    class: "btn btn-primary",
+                    form: { style: "display:inline" } %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>Você não possui empréstimos ativos.</p>
+  <% end %>
+
+  <div class="back-link-container" style="text-align:left;">
+    <%= link_to "⬅️ Voltar", dashboard_path, class: "back-link" %>
+  </div>
+</div>

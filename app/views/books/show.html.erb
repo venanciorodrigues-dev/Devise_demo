@@ -1,0 +1,29 @@
+<div class="book-details-container">
+  <h1>📖 <%= @book.title %></h1>
+
+  <div class="book-detail-item">
+    <strong>Autor:</strong>
+    <span><%= @book.author %></span>
+  </div>
+
+  <div class="book-detail-item">
+    <strong>Preço:</strong>
+    <span><%= number_to_currency(@book.price) %></span>
+  </div>
+
+  <div class="book-detail-item">
+    <strong>Descrição:</strong>
+    <p><%= @book.description %></p>
+  </div>
+
+  <div class="book-detail-item">
+    <strong>Status:</strong>
+    <% if @book.available? %>
+      <span class="status available">Disponível</span>
+    <% else %>
+      <span class="status borrowed">Emprestado</span>
+    <% end %>
+  </div>
+
+  <%= link_to "⬅️ Voltar", books_path, class: "back-link" %>
+</div>

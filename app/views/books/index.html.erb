@@ -1,0 +1,55 @@
+<div class="book-list-container">
+
+  <h1>🔄️ Gerenciar Livros</h1>
+
+  <% if @books.any? %>
+    <% @books.each do |book| %>
+      <div class="book-item">
+        <div class="book-info">
+          <p>
+            <strong><%= book.title %></strong> - <%= book.author %>
+            <% if book.available? %>
+              <span class="status available">(Disponível)</span>
+            <% else %>
+              <span class="status borrowed">(Emprestado)</span>
+            <% end %>
+          </p>
+        </div>
+
+        <div class="book-actions">
+          <%= link_to "Ver", book_path(book), class: "btn btn-primary" %>
+
+          <% if policy(book).edit? %>
+            <%= link_to "Editar", edit_book_path(book), class: "btn btn-secondary" %>
+          <% end %>
+
+          <%# Botão Excluir só se o livro estiver disponível %>
+          <% if policy(book).destroy? && book.available? %>
+            <%= button_to "Excluir", book_path(book), method: :delete, 
+                          data: { confirm: "Tem certeza que deseja excluir este livro?" },
+                          class: "btn btn-secondary",
+                          form: { style: "display:inline" } %>
+          <% end %>
+
+          <% if policy(book).borrow? && book.available? %>
+            <%= button_to "Emprestar", borrow_book_path(book), method: :patch, 
+                          class: "btn btn-primary", 
+                          form: { style: "display:inline" } %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <p>Nenhum livro cadastrado ainda.</p>
+  <% end %>
+
+  <% if policy(Book).create? %>
+    <p><%= link_to "📚 Novo Livro", new_book_path, class: "btn btn-primary" %></p>
+  <% end %>
+
+  <!-- Botão de voltar para o dashboard -->
+  <div class="back-link-container" style="text-align: left;">
+    <%= link_to "⬅️ Voltar", dashboard_path, class: "back-link" %>
+  </div>
+
+</div>
